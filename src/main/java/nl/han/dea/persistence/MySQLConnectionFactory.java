@@ -9,12 +9,13 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 @Default
-class MySQLConnectionFactory {
+class MySQLConnectionFactory implements ConnectionFactory {
 
     // Note: file is in src/main/resources
     private static final String PROPERTY_LOCATION = "/dea-database.properties";
 
-    Connection getConnection() throws SQLException {
+    @Override
+    public Connection getConnection() throws SQLException {
         DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 
         var properties = loadProperties();
