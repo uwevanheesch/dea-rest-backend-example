@@ -1,6 +1,6 @@
 package nl.han.dea.persistence;
 
-import nl.han.dea.services.dto.CustomerDTO;
+import nl.han.dea.service.dto.CustomerDTO;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;

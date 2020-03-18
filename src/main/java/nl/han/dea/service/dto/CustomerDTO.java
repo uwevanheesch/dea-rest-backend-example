@@ -1,4 +1,4 @@
-package nl.han.dea.services.dto;
+package nl.han.dea.service.dto;
 
 public class CustomerDTO {
 

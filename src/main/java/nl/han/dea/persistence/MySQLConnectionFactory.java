@@ -12,14 +12,19 @@ import java.util.Properties;
 class MySQLConnectionFactory implements ConnectionFactory {
 
     // Note: file is in src/main/resources
-    private static final String PROPERTY_LOCATION = "/dea-database.properties";
+    private static final String PROPERTY_LOCATION = "/database/dea-database.properties";
+
+    static {
+        try {
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public Connection getConnection() throws SQLException {
-        DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-
         var properties = loadProperties();
-
         return DriverManager.getConnection(properties.getProperty("db.url"),
                 properties.getProperty("db.user"),
                 properties.getProperty("db.password"));

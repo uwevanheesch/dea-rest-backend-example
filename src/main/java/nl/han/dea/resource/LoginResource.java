@@ -1,4 +1,4 @@
-package nl.han.dea.resources;
+package nl.han.dea.resource;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

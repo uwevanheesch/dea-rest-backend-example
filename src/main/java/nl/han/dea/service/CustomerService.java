@@ -1,9 +1,9 @@
-package nl.han.dea.persistence;
+package nl.han.dea.service;
 
 import nl.han.dea.service.dto.CustomerDTO;
 
 import java.util.List;
 
-public interface CustomerDAO {
+public interface CustomerService {
     List<CustomerDTO> getAllCustomers();
 }

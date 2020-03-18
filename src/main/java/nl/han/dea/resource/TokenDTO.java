@@ -1,4 +1,4 @@
-package nl.han.dea.resources;
+package nl.han.dea.resource;
 
 public class TokenDTO {
 
